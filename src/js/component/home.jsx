@@ -6,18 +6,12 @@ const Home = () => {
 
   const tasksList = [];
 
-  const [tasksListState, setTaskListState] = useState(tasksList); //listado
-  const [tasks, setTask] = useState(""); //valor de input
+  const [tasksListState, setTaskListState] = useState(tasksList); 
+  const [tasks, setTask] = useState(""); 
 
   const showList = tasksListState.map((tasks, i) => {
     return <Task key={i} index={i} description={tasks} list={tasksListState} updateList={setTaskListState}>{tasks} </Task>;
   });
-
-  const deleteTask=(indexTask)=>{
-    console.log('estoy en el delete');
-    const listForMapAndDeleteTask = tasksListState.splice(indexTask, 1);
-      setTaskListState([...listForMapAndDeleteTask]);
-  }
 
   const handleKeyDown = (ev) => {
     if (ev.keyCode === 13 && !ev.shiftKey) {

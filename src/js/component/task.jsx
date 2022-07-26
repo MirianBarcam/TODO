@@ -1,23 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaRegWindowClose} from "react-icons/fa";
 import "/workspace/react-hello/src/styles/task.css";
+
 const Task = (props) => {
+
     const deleteTask=()=>{
-        console.log('estoy en el delete del hijo');
-        console.log('ante de na',props.list);
-        console.log('vamo a ver el indice:',props.index)
-        const listForMapAndDeleteTask = props.list.map((e,i)=>{
-            if(props.index!==i){  
-                return e;
-            }else{
-                props.list.splice(i,1);
-            }   
-        });
-        console.log('nuevo array',listForMapAndDeleteTask);
-          props.updateList([...listForMapAndDeleteTask]);
+        const index=props.index;
+        props.list.splice(index,1);
+        const listForMapAndDeleteTask = props.list;
+        props.updateList([...listForMapAndDeleteTask]);
       }
     
-
     return(
         <div className="container_task">
             <div className="description_task">{props.description}</div>
