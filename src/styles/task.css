@@ -1,0 +1,26 @@
+.container_task{
+    background-color: blanchedalmond;
+    box-shadow: 2px 2px rgb(250, 214, 170);
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.description_task{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.container_icon_close{
+    display: flex;
+    justify-content: end;
+}
+
+.icon_close{
+    margin-left: 20px;
+    color: burlywood;
+}
+
