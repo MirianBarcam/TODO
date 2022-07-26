@@ -9,6 +9,7 @@ const Task = (props) => {
         props.list.splice(index,1);
         const listForMapAndDeleteTask = props.list;
         props.updateList([...listForMapAndDeleteTask]);
+        props.updateNumItems(props.list.length);
       }
     
     return(

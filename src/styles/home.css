@@ -35,3 +35,8 @@ input:focus {
     outline: none;
 }
 
+.num_items{
+    margin: 20px;
+    color: burlywood;
+}
+
