@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Task from "./task.jsx";
-import "/workspace/react-hello/src/styles/home.css";
+import "./../../styles/home.css";
 
 const Home = () => {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FaRegWindowClose} from "react-icons/fa";
-import "/workspace/react-hello/src/styles/task.css";
+import "./../../styles/task.css";
 
 const Task = (props) => {
 
