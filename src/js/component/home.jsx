@@ -31,17 +31,9 @@ const Home = () => {
     if (ev.keyCode === 13 && !ev.shiftKey) {
       if (tasks) {
         setTaskListState([...tasksListState, tasks]);
-        setNumItems(tasksList.length + 1);
+        setNumItems(tasksListState.length + 1);
         setTask({ label: "", done: false });
-        console.log(
-          "lo que tiene la lista antes de actualizar",
-          tasksListState
-        );
         updateTasksList();
-        console.log(
-          "lo que tiene la lista antes de actualizar",
-          tasksListState
-        );
       }
     }
   };
@@ -51,7 +43,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log("estoy en el get");
+    console.log("estoy en el get que hacemos nada más empezar");
     fetch("https://assets.breatheco.de/apis/fake/todos/user/mbarajas", {
       method: "GET",
       headers: {
@@ -69,7 +61,7 @@ const Home = () => {
       })
       .then((data) => {
         // setTaskListState(data);
-        console.log("lo que ha traido el get", data);
+        console.log("lo que ha traido el get del principio", data);
         tasksList = tasksList.concat(data);
         console.log("lo que tiene la lista despues de unirla", tasksList);
         setTaskListState(tasksList);
